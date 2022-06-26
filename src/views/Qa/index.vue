@@ -1,6 +1,6 @@
 <template>
 <div>
-首页
+    问答
 </div>
 </template>
 

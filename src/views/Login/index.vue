@@ -1,6 +1,6 @@
 <template>
 <div>
-首页
+    登录
 </div>
 </template>
 
@@ -18,6 +18,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 
 </style>
