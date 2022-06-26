@@ -1,6 +1,5 @@
 <template>
-<div>
- 123
+<div>123
 </div>
 </template>
 
@@ -18,6 +17,6 @@ export default {
 }
 </script>
 
-<style scoped lang='less'>
+<style scoped>
 
 </style>
