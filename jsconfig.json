@@ -5,6 +5,7 @@
     "jsx":"preserve",
     "baseUrl": "./",
     "moduleResolution": "node",
+    "experimentalDecorators":false,
     "paths": {
       "@/*": [
         "src/*"
