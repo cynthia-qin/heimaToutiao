@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 登录顶部导航栏 -->
-    <van-nav-bar title="登录">
+    <van-nav-bar title="登录" @click-left="$router.back()" >
       <template #left>
         <van-icon name="cross" />
       </template>
@@ -20,7 +20,8 @@
         ]"
       >
         <template #left-icon>
-          <i class="toutiao toutiao-shouji"></i>
+          <!-- <i class="toutiao toutiao-shouji"></i> -->
+          <MyIcon name="shouji" />
         </template>
       </van-field>
       <van-field
@@ -33,7 +34,8 @@
         ]"
       >
         <template #left-icon>
-          <i class="toutiao toutiao-yanzhengma"></i>
+          <!-- <i class="toutiao toutiao-yanzhengma"></i> -->
+          <MyIcon name="yanzhengma" />
         </template>
         <template #button>
           <!-- 倒计时 -->
@@ -85,6 +87,7 @@ export default {
         console.log(res)
         // 将返回的token,和refresh_token 保存到vuex里，
         this.$store.commit('setUser', res.data.data)
+        this.$router.push({ name: 'my' })
         this.$toast('登录成功')
       } catch (err) {
         // console.log(err)
