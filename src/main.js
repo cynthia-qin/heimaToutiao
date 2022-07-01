@@ -11,6 +11,14 @@ import 'amfe-flexible'
 import '@/styles/index.less'
 // 全局注册组件
 import MyIcon from '@/components/MyIcon.vue'
+
+// 将filters文件夹下的index.js文件里的所有按需导出的内容导出  作为obj的属性(默认导出的名字是obj的属性名，值是对应的属性值)
+import * as obj from '@/filters'
+// Object.keys(对象) 可以获取这个对象里的所有属性名，并返回一个数组
+Object.keys(obj).forEach(key => {
+  Vue.filter(key, obj[key])
+})
+
 Vue.component('MyIcon', MyIcon)
 Vue.use(Vant)
 

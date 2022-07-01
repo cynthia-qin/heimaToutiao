@@ -1,6 +1,11 @@
 <template>
   <div>
-    <router-view class="main"></router-view>
+    <!-- 解决切换页面，没有缓存，比如点击了开发者频道，切换到我的页面再切换到首页时，显示的是默认显示的推荐频道 -->
+    <!-- 因为keep-alive会让包裹的组件都缓存，我们只需要将首页缓存即可 -->
+    <keep-alive :include="['HomeIndex']">
+      <router-view class="main"></router-view>
+    </keep-alive>
+
     <van-tabbar route>
       <van-tabbar-item replace to="/home" icon="home-o"
         >首页
