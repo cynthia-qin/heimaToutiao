@@ -41,6 +41,13 @@ const routes = [
     path: '/search',
     name: 'search',
     component: () => import('@/views/search')
+  },
+  {
+    path: '/article/:articleId',
+    name: 'article',
+    component: () => import('@/views/Article'),
+    // 使用props接收路由传递的参数，可以降低代码的耦合性
+    props: true
   }
 ]
 
